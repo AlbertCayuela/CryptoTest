@@ -45,7 +45,7 @@ class FirstScreen extends StatelessWidget {
                   ),
                 ),
                 Spacer(flex: 4),
-                OutlinedButton(
+                ElevatedButton(
                   onPressed: () =>
                       Navigator.pushNamed(context, '/signin_screen'),
                   style: ButtonStyle(
@@ -58,7 +58,7 @@ class FirstScreen extends StatelessWidget {
                         color: Colors.black, fontWeight: FontWeight.bold),
                   ),
                 ),
-                OutlinedButton(
+                ElevatedButton(
                     onPressed: () {},
                     style: ButtonStyle(
                       backgroundColor:

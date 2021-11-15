@@ -18,7 +18,7 @@ class SignInScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Spacer(),
+                Spacer(flex: 2),
                 Text(
                   'Sign in',
                   style: Theme.of(context)
@@ -57,7 +57,21 @@ class SignInScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Spacer(flex: 3),
+                Spacer(),
+                ElevatedButton(
+                  onPressed: () => Navigator.pushNamedAndRemoveUntil(
+                      context, '/crypto_selector_screen', (route) => false),
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Color(0xFF00B4D8)),
+                  ),
+                  child: Text(
+                    'SIGN IN',
+                    style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Spacer(flex: 5),
               ],
             ),
           ),
