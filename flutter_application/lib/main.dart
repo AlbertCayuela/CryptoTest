@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/screens/authentication/sign_in_screen.dart';
 import 'package:flutter_application/screens/first_screen.dart';
+import 'package:flutter_application/themes.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,10 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Invest it now',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        primaryColor: Colors.blue,
-      ),
+      theme: lightThemeData,
+      routes: {
+        '/first_screen': (context) => FirstScreen(),
+        '/signin_screen': (context) => SignInScreen(),
+      },
+      initialRoute: 'first_screen',
       home: FirstScreen(),
     );
   }
