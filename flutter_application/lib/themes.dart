@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/constants.dart';
 
 ThemeData lightThemeData = ThemeData(
     scaffoldBackgroundColor: Color(0xFF151A20),
     textTheme: lightTextTheme,
-    fontFamily: 'Lato');
+    fontFamily: 'Lato',
+    unselectedWidgetColor: Color(blueColor));
 
 TextTheme lightTextTheme = TextTheme(
   headline1: TextStyle(

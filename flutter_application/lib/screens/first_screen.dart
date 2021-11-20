@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/constants.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_application/providers/app_provider.dart';
+import 'package:flutter_application/state.dart';
+import 'package:provider/src/provider.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -47,29 +49,20 @@ class FirstScreen extends StatelessWidget {
                 Spacer(flex: 4),
                 ElevatedButton(
                   onPressed: () =>
-                      Navigator.pushNamed(context, '/signin_screen'),
+                      Navigator.pushNamed(context, '/second_screen').then((_) {
+                    context.read<AppProvider>().appState = AppState.none;
+                    context.read<AppProvider>().selectedItems = 0;
+                  }),
                   style: ButtonStyle(
                     backgroundColor:
                         MaterialStateProperty.all<Color>(Color(0xFF00B4D8)),
                   ),
                   child: Text(
-                    'SIGN IN',
+                    'START',
                     style: Theme.of(context).textTheme.bodyText1?.copyWith(
                         color: Colors.black, fontWeight: FontWeight.bold),
                   ),
                 ),
-                ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Color(0xFF333C46)),
-                    ),
-                    child: Text(
-                      'SIGN UP',
-                      style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                          color: Color(0xFF00B4D8),
-                          fontWeight: FontWeight.bold),
-                    ))
               ],
             ),
           ),
