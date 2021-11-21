@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application/providers/app_provider.dart';
-import 'package:flutter_application/state.dart';
+import 'package:flutter_application/enums.dart';
 import 'package:provider/src/provider.dart';
 import '../constants.dart';
 

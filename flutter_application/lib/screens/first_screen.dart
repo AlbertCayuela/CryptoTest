@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/constants.dart';
 import 'package:flutter_application/providers/app_provider.dart';
-import 'package:flutter_application/state.dart';
+import 'package:flutter_application/enums.dart';
 import 'package:provider/src/provider.dart';
 
 class FirstScreen extends StatelessWidget {

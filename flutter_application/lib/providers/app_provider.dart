@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application/state.dart';
+import 'package:flutter_application/enums.dart';
 
 class AppProvider with ChangeNotifier {
   //Application state
