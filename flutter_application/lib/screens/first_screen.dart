@@ -14,7 +14,7 @@ class FirstScreen extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 50),
+            padding: const EdgeInsets.only(top: 100),
             child: Image.asset(
               'assets/trading_chart.png',
             ),
@@ -39,10 +39,10 @@ class FirstScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Image.asset('assets/btc_logo.png', height: 50),
-                      Image.asset('assets/eth_logo.png', height: 50),
-                      Image.asset('assets/sol_logo.png', height: 50),
-                      Image.asset('assets/shib_logo.png', height: 50),
+                      Image.asset('assets/bitcoin.png', height: 50),
+                      Image.asset('assets/ethereum.png', height: 50),
+                      Image.asset('assets/solana.png', height: 50),
+                      Image.asset('assets/shiba-inu.png', height: 50),
                     ],
                   ),
                 ),

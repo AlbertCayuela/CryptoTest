@@ -7,10 +7,16 @@ import 'package:provider/src/provider.dart';
 import '../constants.dart';
 
 class SelectableCryptoWidget extends StatefulWidget {
+  String name;
+  String slug;
+  double usdPrice;
   CryptoType cryptoType;
 
   SelectableCryptoWidget({
     Key? key,
+    required this.name,
+    required this.slug,
+    required this.usdPrice,
     required this.cryptoType,
   }) : super(key: key);
 
@@ -72,7 +78,7 @@ class _SelectableCryptoWidgetState extends State<SelectableCryptoWidget> {
             activeColor: Color(blueColor),
           ),
           Image.asset(
-            'assets/btc_logo.png',
+            'assets/${widget.slug}.png',
             height: 30,
           ),
           SizedBox(width: 15),
@@ -86,7 +92,7 @@ class _SelectableCryptoWidgetState extends State<SelectableCryptoWidget> {
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                   Text(
-                    'Bitcoin / BTC',
+                    widget.name,
                     style: Theme.of(context)
                         .textTheme
                         .bodyText1
@@ -101,7 +107,7 @@ class _SelectableCryptoWidgetState extends State<SelectableCryptoWidget> {
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                   Text(
-                    '62.000 USD',
+                    '${widget.usdPrice.toStringAsFixed(5)} \$',
                     style: Theme.of(context)
                         .textTheme
                         .bodyText1

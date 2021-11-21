@@ -23,7 +23,10 @@ class ResultsWidget extends StatelessWidget {
         stops: [0, 0.3],
       )),
       child: Scaffold(
-        appBar: AppBar(backgroundColor: Colors.transparent),
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          shadowColor: Colors.transparent,
+        ),
         backgroundColor: Colors.transparent,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
